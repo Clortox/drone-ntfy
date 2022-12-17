@@ -16,6 +16,10 @@ Message=${PLUGIN_MESSAGE:-Pipeline finished!}
 Username=${PLUGIN_USERNAME:-}
 Password=${PLUGIN_PASSWORD:-}
 
+if [[ ! -z $Username ]] || [[ ! -z $Password ]]; then
+    UParam="-u $Username:$Password"
+fi
+
 if [[ ! -z $Priority ]]; then
     Priority="-H Priority:$Priority"
 fi
@@ -40,5 +44,5 @@ if [[ ! -z $Icon ]]; then
     Icon="-H Icon:$Icon"
 fi
 
-curl $Priority $Title $Tags $Click $Attach $Icon -u $Username:$Password -d "$Message" $URL/$Topic
-#curl $Priority $Title $Tags $Click $Attach $Icon -u $Username:$Password -d "$Message" $URL/$Topic
+curl $Priority $Title $Tags $Click $Attach $Icon $UParam -d "$Message" $URL/$Topic
+#curl $Priority $Title $Tags $Click $Attach $Icon $UParam -d "$Message" $URL/$Topic
