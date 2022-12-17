@@ -15,3 +15,14 @@ steps:
     when:
       branch:
         - main
+  - name: notify
+    image: clortox/drone-ntfy
+    settings:
+      URL: https://ntfy.clortox.com
+      USERNAME: drone
+      PASSWORD:
+        from_secret: ntfy_password
+      TOPIC: drone-builds
+      MESSAGE: Drone-ntfy has finished building!
+      CLICK: https://drone.clortox.com/tyler/drone-ntfy
+      TITLE: Drone (drone-ntfy)
