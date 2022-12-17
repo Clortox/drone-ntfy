@@ -1,0 +1,17 @@
+kind: pipeline
+name: default
+
+steps:
+  - name: Build
+    image: plugins/docker
+    settings:
+      username:
+        from_secret: dockerhub_username
+      password:
+        from_secret: dockerhub_password
+      repo:
+        from_secret: dockerhub_repo
+      tags: latest
+    when:
+      branch:
+        - main
