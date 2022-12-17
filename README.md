@@ -1,6 +1,10 @@
 # drone-ntfy
 
-A [Drone](https://drone.io) plugin for ntfy.
+[![Build Status](https://drone.clortox.com/api/badges/tyler/drone-ntfy/status.svg?ref=refs/heads/main)](https://drone.clortox.com/tyler/drone-ntfy)
+
+A [Drone](https://drone.io) plugin for [ntfy](https://ntfy.sh).
+
+Find the container on [docker hub](https://hub.docker.com/repository/docker/clortox/drone-ntfy).
 
 ## Example
 
@@ -35,8 +39,8 @@ your configuration.
 | Title         | PLUGIN_TITLE                   | N/A                               | Title of the notification                              |
 | Tags          | PLUGIN_TAGS                    | N/A                               | Emojis on the notification                             |
 | Click         | PLUGIN_CLICK                   | N/A                               | URL to navigate to if the user clicks the notification |
-| Attach (TODO) | PLUGIN_ATTACH                  | N/A                               | URL or localfile to attach                             |
-| Icon (TODO)   | PLUGIN_ICON                    | N/A                               | Icon to display                                        |
+| Attach        | PLUGIN_ATTACH                  | N/A                               | URL or localfile to attach                             |
+| Icon          | PLUGIN_ICON                    | N/A                               | Icon to display                                        |
 | URL           | PLUGIN_URL                     | ntfy.sh                           | URL to send the notification to                        |
 | Topic         | PLUGIN_TOPIC                   | drone-notifications               | The notification top to send this to                   |
 | Message       | PLUGIN_MESSAGE                 | Pipeline Finished!                | The body of the notification                           |
