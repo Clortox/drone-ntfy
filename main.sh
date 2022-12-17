@@ -6,7 +6,6 @@ Priority=${PLUGIN_PRIORITY:-}
 Title=${PLUGIN_TITLE:-}
 Tags=${PLUGIN_TAGS:-}
 Click=${PLUGIN_CLICK:-}
-
 Attach=${PLUGIN_ATTACH:-}
 Icon=${PLUGIN_ICON:-}
 
@@ -33,5 +32,13 @@ if [[ ! -z $Click ]]; then
     Click="-H Click:$Click"
 fi
 
-curl $Priority $Title $Tags $Click -u $Username:$Password -d "$Message" $URL/$Topic
-#echo curl $Priority $Title $Tags $Click -u $Username:$Password -d "$Message" $URL/$Topic
+if [[ ! -z $Attach ]]; then
+    Attach="-H Attach:$Attach"
+fi
+
+if [[ ! -z $Icon ]]; then
+    Icon="-H Icon:$Icon"
+fi
+
+curl $Priority $Title $Tags $Click $Attach $Icon -u $Username:$Password -d "$Message" $URL/$Topic
+#curl $Priority $Title $Tags $Click $Attach $Icon -u $Username:$Password -d "$Message" $URL/$Topic
