@@ -1,6 +1,10 @@
 # drone-ntfy
 
-A [Drone](https://drone.io) plugin for ntfy.
+[![Build Status](https://drone.clortox.com/api/badges/tyler/drone-ntfy/status.svg?ref=refs/heads/main)](https://drone.clortox.com/tyler/drone-ntfy)
+
+A [Drone](https://drone.io) plugin for [ntfy](https://ntfy.sh).
+
+Find the container on [docker hub](https://hub.docker.com/repository/docker/clortox/drone-ntfy).
 
 ## Example
 
