@@ -26,3 +26,6 @@ steps:
       MESSAGE: Drone-ntfy has finished building!
       CLICK: https://drone.clortox.com/tyler/drone-ntfy
       TITLE: Drone (drone-ntfy)
+    when:
+      branch:
+        - main
