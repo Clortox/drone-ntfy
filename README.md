@@ -1,2 +1,6 @@
 # drone-ntfy
-A Drone plugin for ntfy
+
+A [Drone](https://drone.io) plugin for ntfy.
+
+
+
